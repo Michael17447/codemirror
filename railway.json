@@ -1,9 +1,11 @@
 {
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "NIXPACKS",
+    "buildCommand": "cd server && npm install",
+    "startCommand": "cd server && npm start"
   },
   "deploy": {
-    "startCommand": "node index.js",
-    "rootDirectory": "server"
+    "startCommand": "cd server && npm start",
+    "restartPolicyType": "ON_FAILURE"
   }
 }
